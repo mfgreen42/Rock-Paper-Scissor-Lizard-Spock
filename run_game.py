@@ -1,20 +1,23 @@
 
 from time import sleep
+from unicodedata import name
 
-from human import Human
+from human1 import Human1
+from human2 import Human2
 from ai import Ai
 
 class RunGame:
     def __init__(self):
         self.ai = Ai()
-        self.human = Human()
+        self.human1 = Human1()
+        self.human2 = Human2()
 
 
     def game_play(self):
         self.display_welcome()
         self.number_of_players()
 
-
+        
     def display_welcome(self):
         print("""
         Let's play Rock, Paper, Sissor, Lizard, Spock! """)
@@ -32,24 +35,29 @@ class RunGame:
         players = input('How many players? 1 or 2 ')
         
         if players == '1':
-            print()
-            player1_name = input('What is Player 1 name? ')
-            print(f'{player1_name} vs Computer')
-            return player1_name
+            self.human_vs_ai_gameplay()
+           
         elif players == '2':
-            player1_name = input('What is Player 1 name? ')
-            player2_name = input('What is Player 2 name? ')
-            print()
-            print(f'{player1_name} vs {player2_name}')
-            return player1_name and player2_name
+            self.human_vs_human_gameplay()
+            
+
         else:
+            print('Please choose again: ')
             self.number_of_players()
 
     def how_to_win():
-        
+      pass
 
     def human_vs_ai_gameplay(self):
-        
+        while self.human1.number_of_wins <= 2 or self.ai.number_of_wins <= 2:
+            battle_bool = True
+            
+            if self.human1.throw_hands == 'Scissors' and self.ai.throw_hands == 'Paper':
+                print('Scissors cut Paper')
+                print('Player One wins this round')
+                self.human1.number_of_wins += 1
+            
+      
         pass
 
     def human_vs_human_gameplay(self):   
