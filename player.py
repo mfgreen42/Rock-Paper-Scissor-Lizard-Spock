@@ -1,5 +1,4 @@
-from Rock-Paper-Scissor-Lizard-Spock.ai import Ai
-from Rock-Paper-Scissor-Lizard-Spock.human import Human
+
 
 
 class Player:
@@ -7,8 +6,12 @@ class Player:
 
     def __init__(self, name):
         self.name = name
-        self.
-      pass
+        self.gesture_choices = {'1': 'Rock', '2': 'Paper', '3': 'Scissor', '4': 'Lizard', '5':'Spock'}
+        self.wins = 0
+
+
+    def throw_hands(self):
+        pass
 
         
     

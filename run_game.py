@@ -1,13 +1,14 @@
 
 from time import sleep
+
 from human import Human
 from ai import Ai
 
 class RunGame:
     def __init__(self):
-        self.ai = Ai('Computer')
+        self.ai = Ai()
         self.human = Human()
-    
+
 
     def game_play(self):
         self.display_welcome()
@@ -27,19 +28,22 @@ class RunGame:
             sleep(.25)
             print(wins)
 
-    def number_of_players():
-        players = input('How many players? 1 or 2:')
-        print(players)
-        if players == 1:
-            player1_name = input('What is Player 1 name?')
+    def number_of_players(self):
+        players = input('How many players? 1 or 2 ')
+        
+        if players == '1':
+            player1_name = input('What is Player 1 name? ')
             print(f'{player1_name} vs Computer')
-        elif players == 2:
-            player1_name = input('What is Player 1 name?')
+        elif players == '2':
+            player1_name = input('What is Player 1 name? ')
             player2_name = input('What is Player 2 name? ')
             print(f'{player1_name} vs {player2_name}')
+        else:
+            self.number_of_players()
 
-    def ai_vs_ai_game_play():
+    def human_vs_ai_gameplay(self):
+        
         pass
 
-        
-       
+    def human_vs_human_gameplay(self):   
+       pass
