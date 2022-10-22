@@ -1,12 +1,16 @@
 
+from player import Player
 import random
 
-class Computer:
+class Ai(Player):
 
     def __init__(self):
-        self.comp_choice = ['Rock', 'Paper','Scissor', 'Lizard', 'Spock']
+        super().__init__()
+        self.ai_choice = ['Rock', 'Paper','Scissor', 'Lizard', 'Spock']
+        self.name = 'Computer'
+        self.ai_player = Player()
         
 
     def computer_choice(self):
-        self.comp_choice = random.choice(self.comp_choice)
-        print(f'The computer chose {self.comp_choice}')
+        self.ai_choice = random.choice(self.ai_choice)
+        print(f'The computer chose {self.ai_choice}')
