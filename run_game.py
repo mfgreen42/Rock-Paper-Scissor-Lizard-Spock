@@ -51,12 +51,15 @@ class RunGame:
     def human_vs_ai_gameplay(self):
         while self.human1.number_of_wins <= 2 or self.ai.number_of_wins <= 2:
             battle_bool = True
-            
+            self.human1.throw_hands()
+            self.ai.throw_hands()
             if self.human1.throw_hands == 'Scissors' and self.ai.throw_hands == 'Paper':
                 print('Scissors cut Paper')
                 print('Player One wins this round')
                 self.human1.number_of_wins += 1
-            
+            elif self.human1.throw_hands == 'Paper' and self.ai.throw_hands == 'Rock':
+                print('Paper covers Rock')
+                print('Player One wins this')
       
         pass
 

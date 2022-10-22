@@ -11,8 +11,8 @@ class Ai(Player):
         
 
     def throw_hands(self):
-        self.ai_choice = random.choice(self.gesture_choices.keys)
+        self.ai_choice = random.choice(self.gesture_choices)
         print(f'The computer chose {self.ai_choice}')
-        
+        return self.ai_choice
         
 
