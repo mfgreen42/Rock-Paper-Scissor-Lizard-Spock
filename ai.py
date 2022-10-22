@@ -9,9 +9,6 @@ class Ai(Player):
         # self.ai_choice = ['Rock', 'Paper','Scissor', 'Lizard', 'Spock']
         
 
-    def throw_hands():
-        pass
-
     def throw_hands(self):
         self.ai_choice = random.choice(self.gesture_choices.keys)
         print(f'The computer chose {self.ai_choice}')

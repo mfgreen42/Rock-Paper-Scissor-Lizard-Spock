@@ -17,7 +17,7 @@ class RunGame:
 
     def display_welcome(self):
         print("""
-        Let's play Rock Paper Sissor, Lizard Spock! """)
+        Let's play Rock, Paper, Sissor, Lizard, Spock! """)
         sleep(.25)
         print("""
         Each match will be best out of three games
@@ -32,14 +32,21 @@ class RunGame:
         players = input('How many players? 1 or 2 ')
         
         if players == '1':
+            print()
             player1_name = input('What is Player 1 name? ')
             print(f'{player1_name} vs Computer')
+            return player1_name
         elif players == '2':
             player1_name = input('What is Player 1 name? ')
             player2_name = input('What is Player 2 name? ')
+            print()
             print(f'{player1_name} vs {player2_name}')
+            return player1_name and player2_name
         else:
             self.number_of_players()
+
+    def how_to_win():
+        
 
     def human_vs_ai_gameplay(self):
         
