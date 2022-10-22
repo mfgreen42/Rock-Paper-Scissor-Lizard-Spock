@@ -82,19 +82,23 @@ class RunGame:
                 print('Player Once wins this round')
                 self.human1.number_of_wins =+ 1
             elif self.ai.ai_choice == 'Scissors' and self.human1.human1_choice == 'Paper' or self.ai.ai_choice == 'Scissors' and self.human1.human1_choice == 'Lizard':
-                print('The Cumputer wins this round')
+                print('The Computer wins this round')
                 self.ai.number_of_wins += 1
             elif self.ai.ai_choice =='Paper' and self.human1.human1_choice == 'Rock' or self.ai.ai_choice == 'Paper' and self.human1.human1_choice == 'Spock':
-                print('The Cumputer wins this round')
+                print('The Computer wins this round')
                 self.ai.number_of_wins += 1
-                
-                
-               
-            
+            elif self.ai.ai_choice =='Rock' and self.human1.human1_choice =='Lizard' or self.ai.ai_choice =='Rock' and self.human1.human1_choice == 'Scissors':
+                print('The Computer wins this round')
+                self.ai.number_of_wins += 1
+            elif self.ai.ai_choice == 'Lizard' and self.human1.human1_choice =='Spock' or self.ai.ai_choice =='Lizard' and self.human1.human1_choice =='Paper':
+                print('The Computer wins this round')
+                self.ai.number_of_wins += 1
+            elif self.ai.ai_choice =='Spock' and self.human1.human1_choice == 'Scissors' or self.ai.ai_choice =='Spock' and self.human1.human1_choice =='Rock':
+                print('The Computer wins this round')
+                self.ai.number_of_wins += 1
             else:
                 continue
             
-        pass
 
     def human_vs_human_gameplay(self):   
        pass
