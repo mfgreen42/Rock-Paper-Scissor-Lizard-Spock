@@ -27,7 +27,7 @@ class RunGame:
         sleep(.25)
         print("""
         Each match will be best out of three games
-        Please use the number keys to make your selection
+       
         """)
         wins_list = ['Rock crushes Scissors', 'Scissors cuts Paper','Paper covers Rock', 'Rock crushes Lizard', 'Lizard poisons Spock', 'Spock smashes Scissors', 'Scissors decapitates Lizard', 'Lizard eats Paper', 'Paper disproves Spock', 'Spock vaporizes Rock']
         for wins in wins_list:

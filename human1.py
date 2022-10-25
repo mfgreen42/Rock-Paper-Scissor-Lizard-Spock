@@ -18,14 +18,14 @@ class Human1(Player):
             print(gesture)
         while valid:
             human_input = input('Choose your gesture:  ')
-            if human_input == self.gesture_choices:
-                print(f'Player one chose {human_input}')
+            if human_input == 'Rock' or 'Paper' or 'Scissors' or 'Lizard' or 'Spock':
+                print(f'Player One chose {human_input}')
                 self.human1_choice = human_input
                 valid = False
                 return self.human1_choice
-            
-            else:
+            elif human_input != 'Rock' or 'Paper' or 'Scissors' or 'Lizard' or 'Spock':
                 print('Invalid entry, please choose again.')
+            
 
 
 
