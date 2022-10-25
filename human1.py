@@ -23,7 +23,7 @@ class Human1(Player):
                 self.human1_choice = human_input
                 valid = False
                 return self.human1_choice
-            elif human_input != 'Rock' or 'Paper' or 'Scissors' or 'Lizard' or 'Spock':
+            else:
                 print('Invalid entry, please choose again.')
             
 
