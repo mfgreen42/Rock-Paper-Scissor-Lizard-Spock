@@ -16,7 +16,7 @@ class Human2(Player):
             print(gesture)
         while valid:
             human_input = input('Choose your gesture:  ')
-            if human_input == 'Rock' or 'Paper' or 'Scissors' or 'Lizard' or 'Spock':
+            if human_input == 'Rock' or human_input == 'Paper' or human_input == 'Scissors' or human_input == 'Lizard' or human_input =='Spock':
                 print(f'Player Two chose {human_input}')
                 self.human2_choice = human_input
                 valid = False
